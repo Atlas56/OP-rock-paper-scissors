@@ -1,0 +1,613 @@
+
+body{
+
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+
+
+margin-right: 903px;
+
+}
+.gameblock{
+    width: 500px;
+    height:  250px;
+    display: flex;
+}
+.container{
+
+    width: 250px;
+    height:  250px;
+    background: rgb(82, 80, 80);
+
+}
+.container-bot{
+    width: 250px;
+    height:  250px;
+    background: rgba(6, 6, 7, 0.896);
+
+}
+.hand{
+
+    margin-top: 1.5rem;
+    margin-left: 6rem;
+    width: 50px;
+    height:  50px;
+    background: rgba(59, 61, 58, 0.974);
+}
+
+.rock{
+  z-index: 1;
+background-image: url("./images/rock.png");
+background-size: cover;
+border-radius: 10px;
+
+}
+.paper{
+    background-image: url("./images/paper.png");
+    background-size: cover;
+    border-radius: 10px;
+    z-index: 1;
+}
+.scissors{
+    background-image: url("./images/scissors.png");
+    background-size: cover;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+
+.rock-bot{
+    background-image: url("./images/rock.png");
+    background-size: cover;
+    border-radius: 10px;
+    
+}
+.paper-bot{
+    background-image: url("./images/paper.png");
+    background-size: cover;
+    border-radius: 10px;
+}
+.scissors-bot{
+    background-image: url("./images/scissors.png");
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.modal{
+    position: absolute;
+    margin-top: 5rem;
+    margin-left: 12.5rem;
+    width: 100px;
+    height:  100px;
+    border-radius: 10px;
+    background: rgb(111, 118, 108);
+    border: 2px solid black;
+}
+.hidden{
+display: none;
+}
+
+.message{
+text-align: center;
+margin-top: 1rem;
+}
+.reset{
+    position: absolute;
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    border: 2px solid rgb(60, 255, 0);
+    border-radius: 10px;
+    font-size: 1rem;
+}
+.user2{
+    position: absolute;
+    transform: rotate(-90deg);
+    margin-top:100px;
+    margin-left:120px;
+    font-size: 3rem;
+    color:rgb(0, 179, 18);
+}
+.user{
+  position: absolute;
+  transform: rotate(90deg);
+  margin-top:100px;
+  margin-left:-50px;
+  font-size: 3rem;
+  color:rgb(0, 179, 18);
+}
+
+  h1{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    margin-top: -7rem;
+    margin-left: 12.65rem;
+  }
+.display{
+    margin-top: -2rem;
+    margin-left: 14.3rem;
+}
+
+@keyframes playerhighlight {
+  0% {
+  color:rgb(8, 72, 1);
+  }
+  4.3% {
+  color:rgb(11, 85, 3);
+  }
+  8.6% {
+  color:rgb(17, 147, 3);
+  }
+  12.7% {
+  color:rgb(23, 185, 5);
+  }
+  16.1% {
+  color:rgb(25, 219, 3);
+  }
+  19.4% {
+  color:rgb(26, 255, 0);
+  }
+  23.7% {
+  color:rgb(26, 255, 0);
+  }
+  27% {
+  color:rgb(25, 219, 3);
+  }
+  30.3% {
+  color:rgb(23, 185, 5);
+  }
+  33.5% {
+  color:rgb(17, 147, 3);
+  }
+  36.5% {
+  color:rgb(11, 85, 3);
+  }
+  40% {
+  color:rgb(8, 72, 1);
+  }
+  44% {
+  color:rgb(8, 72, 1);
+  }
+  48% {
+  color:rgb(11, 85, 3);
+  }
+  52%{
+  color:rgb(17, 147, 3);
+  }
+  56.5% {
+  color:rgb(23, 185, 5);
+  }
+  60% {
+  color:rgb(25, 219, 3);
+  }
+  64% {
+  color:rgb(26, 255, 0);
+  }
+  68% {
+  color:rgb(26, 255, 0);
+  }
+  72% {
+  color:rgb(25, 219, 3);
+  }
+  76% {
+  color:rgb(23, 185, 5);
+  }
+  80% {
+  color:rgb(17, 147, 3);
+  }
+  84% {
+  color:rgb(11, 85, 3);
+  }
+  100% {
+  color:rgb(8, 72, 1);}
+}
+.blackborder{
+  border: 4px solid black;
+height: 254px;
+width: 504px;
+}
+.playerhighlight {
+  animation-name: playerhighlight;
+  animation-duration: 7s;
+  animation-iteration-count: infinite; }
+
+
+  @keyframes playerchosegreen {
+    0% {
+    border:2px solid rgba(14, 136, 0, 0.912);
+  }
+    20% {
+    border:2px solid rgb(26, 255, 0);
+    }
+    40% {
+    color:2px solid rgba(14, 136, 0, 0.822);
+    }
+    60% {
+    border:2px solid rgb(26, 255, 0);
+    }
+    80% {
+    border:2px solid rgba(13, 108, 0, 0.674);
+    }
+    100% {
+    border:2px solid rgb(30, 255, 0);
+    }
+  }
+  
+  .playerchosegreen{
+    animation-name: playerchosegreen;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; }
+  
+
+
+.pulse2{
+
+  animation-name: pulse2;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  font-size: 2rem;
+}
+@keyframes pulse2 {
+  0%{
+      transform:translateY(0px);
+
+      }
+      50%{
+      transform:translateY(3px);
+  
+      }
+      100%{
+      transform:translateY(0px);  
+      }
+
+}
+.pulsex{
+
+  animation-name: pulsex;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  font-size: 2rem;
+}
+@keyframes pulsex {
+  0%{
+      transform:translateX(0px);
+
+      }
+      50%{
+      transform:translateX(3px);
+  
+      }
+      100%{
+      transform:translateX(0px);  
+      }
+
+}
+.pulse-x{
+
+  animation-name: pulse-x;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  font-size: 2rem;
+}
+@keyframes pulse-x {
+    0%{
+    transform:translateX(3px);
+    }
+    50%{
+    transform:translateX(0px);
+    }
+    100%{
+    transform:translateX(3px);
+    }
+
+}
+/* slideUp */
+@-webkit-keyframes slideUp {
+    0% {
+      -webkit-transform: translate3d(0, 100%, 0); }
+    100% {
+      -webkit-transform: none; } }
+  @-moz-keyframes slideUp {
+    0% {
+      -moz-transform: translate3d(0, 100%, 0); }
+    100% {
+      -moz-transform: none; } }
+  @-o-keyframes slideUp {
+    0% {
+      -o-transform: translate3d(0, 100%, 0); }
+    100% {
+      -o-transform: none; } }
+  @keyframes slideUp {
+    0% {
+      transform: translate3d(0, 100%, 0); }
+    100% {
+      transform: none; } }
+  
+  .u--slideUp {
+    -webkit-animation: slideUp 1s;
+    -moz-animation: slideUp 1s;
+    -o-animation: slideUp 1s;
+    animation: slideUp 1s; }
+
+    @-webkit-keyframes slideDown {
+        0% {
+          -webkit-transform: translate3d(0, -100%, 0); }
+        100% {
+          -webkit-transform: none; } }
+      @-moz-keyframes slideDown {
+        0% {
+          -moz-transform: translate3d(0, -100%, 0); }
+        100% {
+          -moz-transform: none; } }
+      @-o-keyframes slideDown {
+        0% {
+          -o-transform: translate3d(0, -100%, 0); }
+        100% {
+          -o-transform: none; } }
+      @keyframes slideDown {
+        0% {
+          transform: translate3d(0, -100%, 0); }
+        100% {
+          transform: none; } }
+      
+      .u--slideDown {
+        -webkit-animation: slideDown 1s;
+        -moz-animation: slideDown 1s;
+        -o-animation: slideDown 1s;
+        animation: slideDown 1s; }
+        @-webkit-keyframes slideLeft {
+            0% {
+              -webkit-transform: translate3d(-100%, 0, 0); }
+            100% {
+              -webkit-transform: none; } }
+          @-moz-keyframes slideLeft {
+            0% {
+              -moz-transform: translate3d(-100%, 0, 0); }
+            100% {
+              -moz-transform: none; } }
+          @-o-keyframes slideLeft {
+            0% {
+              -o-transform: translate3d(-100%, 0, 0); }
+            100% {
+              -o-transform: none; } }
+          @keyframes slideLeft {
+            0% {
+              transform: translate3d(-100%, 0, 0); }
+            100% {
+              transform: none; } }
+          
+          .u--slideLeft {
+            -webkit-animation: slideLeft 1s;
+            -moz-animation: slideLeft 1s;
+            -o-animation: slideLeft 1s;
+            animation: slideLeft 1s; }
+          
+          /* slideRight */
+          @-webkit-keyframes slideRight {
+            0% {
+              -webkit-transform: translate3d(100%, 0, 0); }
+            100% {
+              -webkit-transform: none; } }
+          @-moz-keyframes slideRight {
+            0% {
+              -moz-transform: translate3d(100%, 0, 0); }
+            100% {
+              -moz-transform: none; } }
+          @-o-keyframes slideRight {
+            0% {
+              -o-transform: translate3d(100%, 0, 0); }
+            100% {
+              -o-transform: none; } }
+          @keyframes slideRight {
+            0% {
+              transform: translate3d(100%, 0, 0); }
+            100% {
+              transform: none; } }
+          
+          .u--slideRight {
+            -webkit-animation: slideRight 1s;
+            -moz-animation: slideRight 1s;
+            -o-animation: slideRight 1s;
+            animation: slideRight 1s; }
+
+            @keyframes fade {
+            0% {
+
+ 
+            border:2px solid rgba(88, 251, 0, 0.97);
+            }
+            20% {
+
+            border:2px solid rgba(88, 251, 0, 0.439);
+            }
+            30% {
+
+            border:2px solid rgba(88, 251, 0, 0.237);}
+            40% {
+
+            border:2px solid rgba(88, 251, 0, 0.97); } 
+            60% {
+
+            border:2px solid rgba(88, 251, 0, 0.574);
+            }
+            80% {
+
+            border:2px solid rgba(88, 251, 0, 0.346); }
+            100% {
+
+
+            border:2px solid rgba(88, 251, 0, 0.149);
+            }
+                }
+              
+              .highlight {
+
+                -webkit-animation: fade 2s ease-in;
+                -moz-animation: fade 2s ease-in;
+                -o-animation: fade 2s ease-in;
+                animation: fade 2s ease-in; }
+
+.rockVsissors{
+    position: absolute;
+    width: 252px;
+    height:  5px;
+    margin-top: 8rem;
+    margin-left: 7.6rem;
+    background: rgb(20, 244, 0);
+    transform: rotate(-38deg);
+}  
+.rockDraw{
+    position: absolute;
+    width: 198px;
+    height:  5px;
+    margin-top: 3rem;
+    margin-left: 9.3rem;
+    background: rgb(20, 244, 0);
+}
+.rockVspaper{
+    position: absolute;
+    width: 212px;
+    height:  5px;
+    margin-top: 5.5rem;
+    margin-left: 8.9rem;
+    transform: rotate(-20deg);
+    background: rgb(20, 244, 0);
+}
+.paperVsRock{
+    position: absolute;
+    width: 212px;
+    height:  5px;
+    margin-top: 5.5rem;
+    margin-left: 8.9rem;
+    transform: rotate(20deg);
+    background: rgb(20, 244, 0);
+}
+.paperDraw{
+    position: absolute;
+    width: 198px;
+    height:  5px;
+    margin-top: 7.7rem;
+    margin-left: 9.3rem;
+    background: rgb(20, 244, 0);
+}
+.paperVsscissors{
+    position: absolute;
+    width: 212px;
+    height:  5px;
+    margin-top: 10rem;
+    margin-left: 8.9rem;
+    transform: rotate(-20deg);
+    background: rgb(20, 244, 0); 
+}
+.sicssorsDraw{
+    position: absolute;
+    width: 198px;
+    height:  5px;
+    margin-top: 12.5rem;
+    margin-left: 9.3rem;
+    background: rgb(20, 244, 0); 
+}
+.scissorsVspaper{
+    position: absolute;
+    width: 212px;
+    height:  5px;
+    margin-top: 10rem;
+    margin-left: 8.9rem;
+    transform: rotate(20deg);
+    background: rgb(20, 244, 0); 
+}
+.scissorsVsrock{
+    position: absolute;
+    width: 252px;
+    height:  5px;
+    margin-top: 7.8rem;
+    margin-left: 7.6rem;
+    background: rgb(20, 244, 0);
+    transform: rotate(38deg);
+}
+
+
+
+
+.rockVsissorsInvertDeg{
+  position: absolute;
+  width: 252px;
+  height:  5px;
+  margin-top: 8rem;
+  margin-left: 7.6rem;
+  background: rgb(20, 244, 0);
+  transform: rotate(38deg);
+}  
+.rockVspaperInvertDeg{
+  position: absolute;
+  width: 212px;
+  height:  5px;
+  margin-top: 5.5rem;
+  margin-left: 8.9rem;
+  transform: rotate(20deg);
+  background: rgb(20, 244, 0);
+}
+.paperVsRockInvertDeg{
+  position: absolute;
+  width: 212px;
+  height:  5px;
+  margin-top: 5.5rem;
+  margin-left: 8.9rem;
+  transform: rotate(-20deg);
+  background: rgb(20, 244, 0);
+}
+
+.paperVsscissorsInvertDeg{
+  position: absolute;
+  width: 212px;
+  height:  5px;
+  margin-top: 10rem;
+  margin-left: 8.9rem;
+  transform: rotate(20deg);
+  background: rgb(20, 244, 0); 
+}
+
+.scissorsVspaperInvertDeg{
+  position: absolute;
+  width: 212px;
+  height:  5px;
+  margin-top: 10rem;
+  margin-left: 8.9rem;
+  transform: rotate(-20deg);
+  background: rgb(20, 244, 0); 
+}
+.scissorsVsrockInvertDeg{
+  position: absolute;
+  width: 252px;
+  height:  5px;
+  margin-top: 7.8rem;
+  margin-left: 7.6rem;
+  background: rgb(20, 244, 0);
+  transform: rotate(-38deg);
+}
+.win{
+  font-size: 1.7rem;
+  color: rgb(20, 244, 0);
+  border: 2px solid rgb(20, 244, 0);
+}
+.lose{
+  font-size: 2rem;
+  color: rgb(255, 0, 0);
+  border: 2px solid rgb(20, 244, 0);
+}
+.gamecom{
+  position: absolute;
+  margin-top: -200px;
+  margin-left: 14rem;
+  border: 2px solid rgb(20, 244, 0);
+  background: rgb(108, 112, 108); 
+  border-radius: 5px;
+}
+.game2vs{
+  position: absolute;
+  margin-top: -150px;
+  margin-left: 13rem;
+  border: 2px solid rgb(20, 244, 0);
+  background: rgb(108, 112, 108); 
+  border-radius: 5px;
+}
